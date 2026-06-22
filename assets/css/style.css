@@ -1,21 +1,28 @@
 :root {
-  --bg: #0a0f1e;
-  --text: #c0c8d8;
-  --accent: #3b82f6;
-  --surface: #111a30;
-  --border: #223250;
+  --bg: #120b05;
+  --text: #f7e7bf;
+  --accent: #d4af37;
+  --accent-2: #f5d77a;
+  --surface: #1f1408;
+  --border: #5c4520;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.12), transparent 35%),
+    linear-gradient(180deg, #120b05 0%, #0d0904 100%);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .container {
@@ -30,9 +37,10 @@ body {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(10, 15, 30, 0.92);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(6px);
+  z-index: 20;
+  background: rgba(18, 11, 5, 0.92);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+  backdrop-filter: blur(10px);
 }
 
 .header-inner {
@@ -40,7 +48,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.8rem 0;
+  padding: 0.95rem 0;
 }
 
 .brand,
@@ -51,7 +59,8 @@ a {
 
 .brand {
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  color: var(--accent-2);
 }
 
 .nav-list {
@@ -66,23 +75,23 @@ a {
 .nav-list a:hover,
 a:hover,
 a:focus-visible {
-  color: var(--accent);
+  color: var(--accent-2);
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 4.2rem 0;
 }
 
 .hero {
-  padding: 6rem 0 4rem;
+  padding: 6.5rem 0 4.5rem;
 }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.18em;
+  color: var(--accent-2);
+  font-weight: 800;
+  margin-bottom: 0.65rem;
 }
 
 h1,
@@ -90,26 +99,32 @@ h2,
 h3,
 h4 {
   margin-top: 0;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 h1 {
-  font-size: clamp(2.3rem, 6vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  color: #fff4d0;
 }
 
 h2 {
-  color: var(--accent);
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--accent-2);
+  font-size: clamp(1.25rem, 3vw, 2.1rem);
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   margin-bottom: 1rem;
+  color: #fff0c2;
+}
+
+h4 {
+  color: #fff0c2;
 }
 
 .lead {
   max-width: 72ch;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 .grid {
@@ -126,14 +141,16 @@ h3 {
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 1.2rem;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08), rgba(31, 20, 8, 0.92));
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .featured {
-  border-color: var(--accent);
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 1px rgba(245, 215, 122, 0.15), 0 12px 34px rgba(0, 0, 0, 0.22);
 }
 
 .contact-form {
@@ -150,29 +167,29 @@ button {
 input,
 textarea {
   width: 100%;
-  padding: 0.7rem;
-  border-radius: 8px;
+  padding: 0.75rem;
+  border-radius: 10px;
   border: 1px solid var(--border);
-  background: #0f1730;
+  background: #160f08;
   color: var(--text);
 }
 
 button {
   width: fit-content;
   border: 0;
-  border-radius: 8px;
-  padding: 0.65rem 1rem;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
+  border-radius: 10px;
+  padding: 0.7rem 1.05rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #221500;
+  font-weight: 800;
   cursor: pointer;
 }
 
 .site-footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(212, 175, 55, 0.22);
   padding: 1.6rem 0;
   text-align: center;
-  color: #93a0b8;
+  color: #d9c28b;
 }
 
 @media (max-width: 760px) {
