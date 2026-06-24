@@ -1,128 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Work | Muhammad Yunas</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Work | Muhammad Yunas</title>
 
-  <style>
-    :root {
-      --bg: #020617;
-      --panel: #0b0f1a;
-      --panel-soft: #0f172a;
-      --gold: #f5c451;
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --border: #1f2937;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
+<style>
+:root {
+  --bg: #020617;
+  --panel: #0b0f1a;
+  --panel-soft: #0f172a;
+  --gold: #f5c451;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --border: #1f2937;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text-main);
-      font-family: var(--font);
-      line-height: 1.6;
-      padding: 40px 20px;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
 
-    h1 {
-      font-size: 2.4rem;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
+h1 {
+  font-size: 2.4rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
 
-    h2 {
-      font-size: 1.6rem;
-      margin-top: 40px;
-      color: var(--gold);
-    }
+h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+  color: var(--gold);
+}
 
-    .project {
-      background: var(--panel);
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-      border: 1px solid var(--border);
-    }
+.project {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+}
 
-    .project h3 {
-      margin: 0 0 10px 0;
-      color: var(--text-main);
-    }
+.project h3 {
+  margin: 0 0 10px 0;
+  color: var(--text-main);
+}
 
-    .project p {
-      margin: 0;
-      color: var(--text-muted);
-    }
+.project p {
+  margin: 0;
+  color: var(--text-muted);
+}
 
-    a.back {
-      display: inline-block;
-      margin-bottom: 30px;
-      color: var(--gold);
-      text-decoration: none;
-      font-size: 1rem;
-    }
-  </style>
+a.back {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.case-index {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 20px;
+}
+
+.work-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.work-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.work-title {
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.work-desc {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.case-link {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+</style>
 </head>
 
 <body>
 
-  <a href="index.html" class="back">← Back to Home</a>
+<a href="index.html" class="back">← Back to Home</a>
 
-  <h1>Selected Work</h1>
-  <p style="color: var(--text-muted); max-width: 700px;">
-    A curated set of work across Physical AI, Industrial Intelligence, and GTM leadership — spanning energy, manufacturing, HPC, data protection, and industrial AI platforms.
+<h1>Selected Work</h1>
+<p style="color: var(--text-muted); max-width: 700px;">
+  A curated set of work across Physical AI, Industrial Intelligence, and GTM leadership.
+</p>
+
+<div class="case-index">
+
+<!-- UST -->
+<div class="work-card fade-in">
+  <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb?auto=format&fit=crop&w=1200&q=80" class="work-image">
+  <div class="work-title">UST — Retail AI & Physical AI</div>
+  <div class="work-desc">
+    AI-driven retail intelligence: Bluetooth labeling, real-time inventory, and just-in-time operations across large retail environments.
+  </div>
+  <a href="case-ust.html" class="case-link">Read Case Study →</a>
+</div>
+
+<!-- Uptake -->
+<div class="work-card fade-in">
+  <img src="https://images.unsplash.com/photo-1581091870627-3f9c1f1e1a9e?auto=format&fit=crop&w=1200&q=80" class="work-image">
+  <div class="work-title">Uptake — Industrial AI Platform</div>
+  <div class="work-desc">
+    Unified OT data ingestion, predictive maintenance, and the Asset Strategy Library powering industrial intelligence.
+  </div>
+  <a href="case-uptake.html" class="case-link">Read Case Study →</a>
+</div>
+
+<!-- Dell -->
+<div class="work-card fade-in">
+  <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" class="work-image">
+  <div class="work-title">Dell Technologies — HPC & Data Protection</div>
+  <div class="work-desc">
+    HPC for healthcare and research, plus predictive anomaly detection for ransomware and data corruption.
+  </div>
+  <a href="case-dell.html" class="case-link">Read Case Study →</a>
+</div>
+
+<!-- Schneider Electric -->
+<div class="work-card fade-in">
+  <img src="https://images.unsplash.com/photo-1581091012184-5c1d7b3c4d9b?auto=format&fit=crop&w=1200&q=80" class="work-image">
+  <div class="work-title">Schneider Electric — DCIM</div>
+  <div class="work-desc">
+    The earliest blueprint of Physical AI: multi-vendor sensor integration, thermal modeling, and real-time control.
+  </div>
+  <a href="case-dcim.html" class="case-link">Read Case Study →</a>
+</div>
+
+</div> <!-- END case-index -->
+
+<div class="project">
+  <h3>Customer-Oriented Physical AI</h3>
+  <p>
+    Connected physical store signals to digital systems to optimize staffing, replenishment, and customer experience.
   </p>
-
-  <div class="case-index">
-
-  <!-- UST -->
-  <div class="work-card fade-in">
-    <img src="https://images.unsplash.com/photo-1556741533-f6acd647d2fb" class="work-image">
-    <div class="work-title">UST — Retail AI & Physical AI</div>
-    <div class="work-desc">
-      AI‑driven retail intelligence: Bluetooth labeling, real‑time inventory, and just‑in‑time operations across large retail environments.
-    </div>
-    <a href="case-ust.html" class="case-link">Read Case Study →</a>
-  </div>
-
-  <!-- Uptake -->
-  <div class="work-card fade-in">
-    <img src="https://images.unsplash.com/photo-1581091870627-3f9c1f1e1a9e" class="work-image">
-    <div class="work-title">Uptake — Industrial AI Platform</div>
-    <div class="work-desc">
-      Unified OT data ingestion, predictive maintenance, and the Asset Strategy Library powering industrial intelligence.
-    </div>
-    <a href="case-uptake.html" class="case-link">Read Case Study →</a>
-  </div>
-
-  <!-- Dell -->
-  <div class="work-card fade-in">
-    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" class="work-image">
-    <div class="work-title">Dell Technologies — HPC & Data Protection</div>
-    <div class="work-desc">
-      HPC for healthcare and research, plus predictive anomaly detection for ransomware and data corruption.
-    </div>
-    <a href="case-dell.html" class="case-link">Read Case Study →</a>
-  </div>
-
-  <!-- Schneider Electric -->
-  <div class="work-card fade-in">
-    <img src="https://images.unsplash.com/photo-1581091012184-5c1d7b3c4d9b" class="work-image">
-    <div class="work-title">Schneider Electric — DCIM</div>
-    <div class="work-desc">
-      The earliest blueprint of Physical AI: multi‑vendor sensor integration, thermal modeling, and real‑time control.
-    </div>
-    <a href="case-dcim.html" class="case-link">Read Case Study →</a>
-  </div>
-
-  <div class="project">
-    <h3>Customer‑Oriented Physical AI</h3>
-    <p>
-      Connected physical store signals to digital systems to optimize staffing, replenishment, and customer experience.
-    </p>
-  </div>
+</div>
 
 </body>
 </html>
