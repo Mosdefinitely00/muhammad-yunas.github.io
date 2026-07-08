@@ -436,3 +436,105 @@ button {
         font-size: 20px;
     }
 }
+
+/***************************************************************
+ * A) CINEMATIC GLOW ANIMATION — HERO PORTRAIT
+ ***************************************************************/
+
+.hero-portrait {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 0 55px rgba(255, 211, 105, 0.18);
+    border: 1px solid rgba(255, 211, 105, 0.25);
+    animation: portraitGlow 6s ease-in-out infinite;
+}
+
+@keyframes portraitGlow {
+    0% {
+        box-shadow: 0 0 40px rgba(255, 211, 105, 0.15);
+    }
+    50% {
+        box-shadow: 0 0 70px rgba(255, 211, 105, 0.28);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(255, 211, 105, 0.15);
+    }
+}
+
+/***************************************************************
+ * B) SCROLL-TRIGGERED TEXT ANIMATION
+ ***************************************************************/
+
+.hero-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/***************************************************************
+ * C) GOLD UNDERLINE ANIMATION — HERO H1
+ ***************************************************************/
+
+.hero-text h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-text h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd369, #ffcc55);
+    border-radius: 2px;
+    animation: underlineSweep 1.8s ease forwards;
+}
+
+@keyframes underlineSweep {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+<div class="persona-bubble" id="personaBubble">
+    “Physical AI is where silicon meets steel — and where your GTM strategy becomes a force multiplier.”
+</div>
+
+<script>
+    const bubble = document.getElementById('personaBubble');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 120) {
+            bubble.classList.add('visible');
+        }
+    });
+</script>
+
+/***************************************************************
+ * E) GEOMETRIC PHYSICAL-AI BACKGROUND GRID
+ ***************************************************************/
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(90deg, rgba(255, 211, 105, 0.08) 1px, transparent 1px),
+        linear-gradient(rgba(255, 211, 105, 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.25;
+    pointer-events: none;
+}
