@@ -76,3 +76,37 @@
         }
     });
 </script>
+
+<a class="hover-gold hover-underline">Capabilities</a>
+<div class="hover-lift">Card Content</div>
+
+<script>
+    const portrait = document.querySelector('.hero-portrait');
+    const bubble = document.getElementById('personaBubble');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 120) {
+            bubble.classList.add('visible');
+            portrait.classList.add('glow');
+        } else {
+            bubble.classList.remove('visible');
+            portrait.classList.remove('glow');
+        }
+    });
+</script>
+
+<script>
+    const titles = document.querySelectorAll('.section-title');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    titles.forEach(title => observer.observe(title));
+</script>
+
+<h2 class="section-title">Capabilities</h2>
