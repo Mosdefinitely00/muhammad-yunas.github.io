@@ -48,3 +48,17 @@
 
     <img src="your-photo.jpg" class="hero-portrait">
 </section>
+
+<script>
+    const heroText = document.querySelector('.hero-text');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                heroText.classList.add('visible');
+            }
+        });
+    });
+
+    observer.observe(heroText);
+</script>
