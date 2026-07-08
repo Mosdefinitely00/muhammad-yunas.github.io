@@ -41,4 +41,6 @@ if (sections.length > 0 && 'IntersectionObserver' in window) {
   );
 
   sections.forEach((section) => observer.observe(section));
+} else if (sections.length > 0) {
+  setActiveLink(sections[0].id);
 }
