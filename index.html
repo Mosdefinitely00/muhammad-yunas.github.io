@@ -62,3 +62,17 @@
 
     observer.observe(heroText);
 </script>
+
+<div class="persona-bubble" id="personaBubble">
+    “Physical AI is where silicon meets steel — and where your GTM strategy becomes a force multiplier.”
+</div>
+
+<script>
+    const bubble = document.getElementById('personaBubble');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 120) {
+            bubble.classList.add('visible');
+        }
+    });
+</script>
