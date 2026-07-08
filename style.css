@@ -884,3 +884,117 @@ p {
     transform: translateY(0);
 }
 
+/***************************************************************
+ * ULTRA‑SMALL SCREEN SUPPORT (≤ 360px)
+ ***************************************************************/
+@media (max-width: 360px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .hero-portrait {
+        max-width: 200px;
+    }
+
+    .nav-brand {
+        font-size: 22px;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .card {
+        padding: 1.4rem;
+    }
+
+    .persona-bubble {
+        right: 20px;
+        bottom: 20px;
+        font-size: 14px;
+        max-width: 200px;
+    }
+}
+
+/***************************************************************
+ * TABLET OPTIMIZATION (768px–1024px)
+ ***************************************************************/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        padding: 4rem 2rem;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 44px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .hero-portrait {
+        max-width: 300px;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+}
+
+/***************************************************************
+ * DARK/LIGHT MODE — THEME VARIABLES
+ ***************************************************************/
+:root {
+    --bg: #0d0d0d;
+    --text: #e8e8e8;
+    --card-bg: #111;
+    --accent: #ffd369;
+}
+
+.light-mode {
+    --bg: #ffffff;
+    --text: #222222;
+    --card-bg: #f5f5f5;
+    --accent: #d4a017;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.card {
+    background: var(--card-bg);
+}
+
+.hover-gold:hover {
+    color: var(--accent);
+}
+
+/***************************************************************
+ * MOBILE‑OPTIMIZED PERSONA INTERACTIONS
+ ***************************************************************/
+@media (max-width: 768px) {
+    .persona-bubble {
+        bottom: 20px;
+        right: 20px;
+        font-size: 15px;
+        padding: 0.8rem 1rem;
+        max-width: 220px;
+        box-shadow: 0 0 18px rgba(255, 211, 105, 0.18);
+    }
+}
