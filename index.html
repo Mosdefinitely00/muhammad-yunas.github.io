@@ -1,172 +1,713 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <title>Muhammad Yunas – Physical AI & Agentic AI GTM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Senior Director, Product Marketing – Physical AI & Industrial Intelligence. GTM, category creation, and industrial autonomy." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad A. Yunas - Physical AI & Agentic AI GTM Leader</title>
+    <meta name="description" content="Portfolio of Muhammad A. Yunas, Senior Director of Product Marketing and Physical/Agentic AI GTM Leader.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+          --bg: #050815;
+          --bg-soft: #0b1020;
+          --surface: rgba(255, 255, 255, 0.05);
+          --surface-strong: rgba(255, 255, 255, 0.09);
+          --text: #f6f1e8;
+          --muted: #b6c1d8;
+          --accent: #3e97ff;
+          --accent-2: #8dc8ff;
+          --signal: #d6b36a;
+          --signal-soft: rgba(214, 179, 106, 0.16);
+          --border: rgba(141, 200, 255, 0.18);
+          --shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+          margin: 0;
+          font-family: "Manrope", system-ui, -apple-system, sans-serif;
+          background:
+            radial-gradient(circle at top left, rgba(62, 151, 255, 0.18), transparent 28%),
+            radial-gradient(circle at 86% 12%, rgba(214, 179, 106, 0.13), transparent 24%),
+            linear-gradient(180deg, #050815 0%, #09111f 100%);
+          color: var(--text);
+          line-height: 1.7;
+          background-attachment: fixed;
+        }
+
+        img { display: block; max-width: 100%; }
+        a { color: inherit; text-decoration: none; transition: color 0.2s ease; }
+        a:hover, a:focus-visible { color: var(--accent-2); }
+
+        .container {
+          width: min(1180px, calc(100% - 2rem));
+          margin: 0 auto;
+        }
+
+        .site-header {
+          position: sticky;
+          top: 0;
+          z-index: 50;
+          backdrop-filter: blur(16px);
+          background: rgba(5, 8, 21, 0.85);
+          border-bottom: 1px solid rgba(141, 200, 255, 0.12);
+        }
+
+        .brand {
+          font-weight: 800;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: var(--accent-2);
+        }
+
+        .nav-list {
+          list-style: none;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.72rem 1.5rem;
+          margin: 0;
+          padding: 0;
+          color: #d0d9ea;
+          font-size: 0.94rem;
+          font-weight: 500;
+        }
+
+        .section { padding: 6rem 0; }
+        .hero { padding-top: 5rem; padding-bottom: 4rem; }
+
+        .hero-grid {
+          display: grid;
+          gap: 3rem;
+          grid-template-columns: 1.2fr 0.8fr;
+          align-items: center;
+        }
+
+        .hero-copy h1 {
+          margin: 0;
+          font-size: clamp(2.8rem, 4.8vw, 4.9rem);
+          line-height: 1.05;
+          max-width: 15ch;
+          background: linear-gradient(to right, #ffffff, #b6c1d8);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .section-heading h2 {
+          margin: 0;
+          font-size: clamp(2rem, 3vw, 3rem);
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+        }
+
+        .eyebrow {
+          margin: 0 0 1rem;
+          color: var(--signal);
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          font-size: 0.85rem;
+          font-weight: 800;
+        }
+
+        .lead {
+          max-width: 55ch;
+          color: var(--muted);
+          font-size: 1.15rem;
+          margin: 1.5rem 0 0;
+        }
+
+        .button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 3rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: 6px;
+          border: 1px solid transparent;
+          font-weight: 800;
+          font-size: 0.95rem;
+          letter-spacing: 0.02em;
+          transition: all 200ms ease;
+          cursor: pointer;
+        }
+
+        .button:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(62, 151, 255, 0.2); }
+        
+        .button-primary {
+          background: linear-gradient(135deg, var(--accent), var(--accent-2));
+          color: #041120;
+        }
+
+        .button-secondary {
+          border-color: var(--border);
+          background: rgba(255, 255, 255, 0.03);
+          color: var(--text);
+        }
+
+        .portrait-frame {
+          padding: 1rem;
+          border-radius: 12px;
+          background:
+            linear-gradient(180deg, var(--signal-soft), rgba(255, 255, 255, 0.03)),
+            rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(214, 179, 106, 0.24);
+          box-shadow: var(--shadow);
+          position: relative;
+        }
+
+        .portrait-frame img {
+          width: 100%;
+          border-radius: 8px;
+          aspect-ratio: 3 / 4;
+          object-fit: cover;
+        }
+
+        /* Ambient glow behind portrait */
+        .portrait-frame::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            background: radial-gradient(circle at center, rgba(214, 179, 106, 0.15) 0%, transparent 70%);
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .executive-band {
+          padding: 5rem 0;
+          background:
+            linear-gradient(90deg, rgba(214, 179, 106, 0.08), transparent 45%),
+            rgba(255, 255, 255, 0.02);
+          border-block: 1px solid rgba(214, 179, 106, 0.16);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .executive-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+        }
+
+        .executive-proof span {
+          min-height: 5rem;
+          display: flex;
+          align-items: flex-end;
+          padding: 1rem;
+          border-left: 3px solid var(--signal);
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015));
+          color: #efe3c4;
+          font-weight: 800;
+          line-height: 1.3;
+          font-size: 0.95rem;
+          border-radius: 0 6px 6px 0;
+        }
+
+        .card {
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 1.75rem;
+          box-shadow: var(--shadow);
+          transition: transform 300ms ease, border-color 300ms ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(141, 200, 255, 0.35);
+        }
+
+        .metric-card {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .metric-card::after {
+          content: "";
+          position: absolute;
+          inset: auto -10% -40% auto;
+          width: 140px;
+          height: 140px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(62, 151, 255, 0.15), transparent 70%);
+          pointer-events: none;
+        }
+
+        .metric-label {
+          margin: 0 0 0.5rem;
+          color: var(--accent-2);
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          font-size: 0.75rem;
+          font-weight: 800;
+        }
+
+        .metric-value {
+          margin: 0;
+          font-size: clamp(2rem, 3vw, 2.5rem);
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: #fff;
+        }
+
+        .metric-note { margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--muted); }
+
+        .timeline {
+          display: grid;
+          gap: 1.5rem;
+          position: relative;
+        }
+        
+        /* Timeline line */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 1rem;
+            bottom: 1rem;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+          position: relative;
+          padding: 2rem 2rem 2rem 5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1.65rem;
+            top: 2.25rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 3px solid var(--accent-2);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .timeline-header {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: baseline;
+          gap: 0.5rem 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .timeline-header h3 {
+          margin: 0;
+          font-size: 1.25rem;
+          color: #fff;
+          font-weight: 800;
+        }
+
+        .timeline-header .company {
+            color: var(--accent-2);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .timeline-header span.date {
+          color: var(--signal);
+          font-size: 0.9rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
+
+        .timeline-item ul {
+          margin: 1rem 0 0;
+          padding-left: 1.25rem;
+          color: var(--muted);
+        }
+
+        .timeline-item li { margin-bottom: 0.5rem; }
+        .timeline-item li::marker { color: var(--accent); }
+
+        .keyword-cloud {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+
+        .keyword {
+          padding: 0.5rem 1rem;
+          border-radius: 8px;
+          border: 1px solid var(--border);
+          background: rgba(255, 255, 255, 0.04);
+          color: var(--text);
+          font-size: 0.95rem;
+          font-weight: 500;
+          transition: all 0.2s ease;
+        }
+
+        .keyword:hover {
+            background: rgba(62, 151, 255, 0.1);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .keyword.highlight {
+          color: #041120;
+          background: var(--accent-2);
+          border-color: var(--accent-2);
+          font-weight: 700;
+        }
+
+        .contact-card {
+          background:
+            linear-gradient(135deg, rgba(62, 151, 255, 0.12), transparent 50%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+          padding: 3rem;
+          display: grid;
+          grid-template-columns: 1.2fr 0.8fr;
+          gap: 2rem;
+          align-items: center;
+        }
+
+        .reveal {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 800ms ease-out, transform 800ms ease-out;
+        }
+
+        .reveal.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .metric-card.is-visible {
+          animation: kpiFloat 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+        }
+
+        @keyframes kpiFloat {
+          from { transform: translateY(20px) scale(0.95); opacity: 0; }
+          to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 980px) {
+          .hero-grid, .executive-grid, .contact-card { grid-template-columns: 1fr; gap: 2rem; }
+          .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+          .timeline::before { left: 1rem; }
+          .timeline-item { padding-left: 3rem; }
+          .timeline-item::before { left: 0.65rem; }
+        }
+
+        @media (max-width: 640px) {
+          .metrics-grid { grid-template-columns: 1fr; }
+          .section { padding: 4rem 0; }
+          .contact-card { padding: 2rem; }
+        }
+    </style>
 </head>
+<body class="antialiased">
 
-<body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <div class="brand">
-        <span class="brand-mark">MY</span>
-        <span class="brand-text">Muhammad Yunas</span>
-      </div>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#hero">Overview</a></li>
-          <li><a href="#about">Profile</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#resume">Resume</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="hero" class="section hero">
-    <div class="container">
-      <p class="eyebrow">Senior Director · Product Marketing</p>
-
-      <h1>
-        Physical AI & Industrial Intelligence<br />
-        <span style="color: var(--accent-2); font-size: 1.4rem;">
-          Category Creation · GTM · Narrative Control
-        </span>
-      </h1>
-
-      <p class="lead">
-        I build and scale GTM systems for Physical AI, Agentic AI, and industrial autonomy—
-        where software, sensors, and operations converge into one intelligent fabric.
-      </p>
-
-      <!-- Persona Bubble -->
-      <div class="card" style="margin-top: 2rem;">
-        <h3>Persona · Physical AI GTM</h3>
-        <p>
-          “My work sits at the intersection of AI, industrial systems, and executive narrative.
-          I turn complex, cyber‑physical products into clear, defensible stories that win markets,
-          not just mindshare.”
-        </p>
-      </div>
-
-      <!-- Persona Image -->
-      <div class="card" style="margin-top: 2rem; text-align:center;">
-        <img src="assets/persona-stylized.png"
-             alt="Stylized Physical AI persona"
-             style="width: 100%; max-width: 420px; border-radius: 14px;" />
-        <p style="margin-top: 0.5rem; color: var(--accent-2);">
-          Physical AI · Agentic AI · Industrial Autonomy
-        </p>
-      </div>
-
-      <div style="margin-top: 2rem;">
-        <a class="btn" href="#resume">View Executive Resume</a>
-        <a class="btn" href="#impact" style="margin-left: 1rem;">See GTM & Impact</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>Profile · Executive Narrative</h2>
-
-      <p class="lead">
-        I operate as a Senior Director‑level Product Marketing leader focused on Physical AI,
-        Agentic AI, and industrial intelligence—owning GTM, positioning, and executive‑grade
-        storytelling for complex, cyber‑physical products.
-      </p>
-
-      <div class="card" style="margin-top: 2rem;">
-        <img src="assets/portrait.png"
-             alt="Formal portrait of Muhammad Yunas"
-             style="width: 100%; max-width: 360px; border-radius: 14px;" />
-        <p style="margin-top: 1rem;">
-          <strong>Location:</strong> West Islip, NY · Long Island<br />
-          <strong>Role:</strong> Senior Director, Product Marketing<br />
-          <strong>Domains:</strong> Physical AI, Agentic AI, Industrial Intelligence
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- IMPACT -->
-  <section id="impact" class="section">
-    <div class="container">
-      <h2>Selected Impact · Physical AI & Industrial Systems</h2>
-
-      <div class="grid six-up" style="margin-top: 2rem;">
-        <div class="card">
-          <h3>Physical Operations Intelligence Platform</h3>
-          <p>
-            Led GTM and narrative for a cyber‑physical operations platform unifying sensors,
-            control systems, and AI into a single operational intelligence layer—positioned as
-            the “control plane” for physical infrastructure.
-          </p>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="brand text-xl">M. YUNAS</a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#expertise">Capabilities</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="card">
-          <h3>Agentic AI for Industrial Autonomy</h3>
-          <p>
-            Defined category language and GTM motion for agentic AI systems orchestrating
-            workflows across plants, facilities, and field operations—bridging AI decision‑making
-            with real‑world constraints and safety.
-          </p>
+    <main>
+        <section class="hero section">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Product Marketing Executive</p>
+                    <h1 class="mb-4">Physical AI & Agentic AI GTM Leader</h1>
+                    <p class="lead">
+                        The rarest skill in enterprise technology is not knowing the product—it is <strong>making industrial buyers say yes</strong> before the category language even exists. That is what I have done for 18 years.
+                    </p>
+                    <div class="flex gap-4 mt-8">
+                        <a href="#contact" class="button button-primary">Connect with Me</a>
+                        <a href="https://linkedin.com/in/muhammad-yunas" target="_blank" rel="noopener" class="button button-secondary">View LinkedIn</a>
+                    </div>
+                </div>
+                <div class="portrait-frame reveal" style="transition-delay: 200ms;">
+                    <!-- Using the provided high-tech styled persona image -->
+                    <img src="persona-stylized.png" alt="Muhammad A. Yunas - AI & GTM Leader" width="800" height="1067">
+                </div>
+            </div>
+        </section>
+
+        <section class="section pt-0">
+            <div class="container">
+                <div class="metrics-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="card metric-card reveal">
+                        <p class="metric-label">Revenue Influence</p>
+                        <p class="metric-value">$150M+</p>
+                        <p class="metric-note">Documented career revenue influence</p>
+                    </div>
+                    <div class="card metric-card reveal">
+                        <p class="metric-label">Pipeline Generation</p>
+                        <p class="metric-value">$24M</p>
+                        <p class="metric-note">Net-new pipeline generated (Dell)</p>
+                    </div>
+                    <div class="card metric-card reveal">
+                        <p class="metric-label">Sales Velocity</p>
+                        <p class="metric-value">42%</p>
+                        <p class="metric-note">Win rate improvement & reduced cycle times</p>
+                    </div>
+                    <div class="card metric-card reveal">
+                        <p class="metric-label">Market Capture</p>
+                        <p class="metric-value">38%</p>
+                        <p class="metric-note">Market share captured within 18 months</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="executive-band">
+            <div class="container executive-grid">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6 text-white leading-tight">18 Years Commercializing OT/IT Convergence</h2>
+                    <div class="text-lg text-[#b6c1d8] space-y-4">
+                        <p>
+                            From defining DCIM at Schneider Electric to pioneering cyber-physical resilience at Dell Technologies, and driving Agentic AI advisory today, my career is defined by one repeatable act: <strong>entering technically complex, long-cycle B2B markets early.</strong>
+                        </p>
+                        <p>
+                            I build the GTM architecture that converts buyer skepticism into signed contracts at scale. Serving as the strategic quarterback between product management and sales, I translate Industry 4.0 capabilities into narratives that compress sales cycles and expand market share.
+                        </p>
+                        <blockquote class="mt-8 border-l-4 border-[var(--signal)] pl-6 italic text-xl text-white font-medium py-2">
+                            "Listen deeply. Clarify relentlessly. Execute decisively."
+                        </blockquote>
+                    </div>
+                </div>
+                
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card p-6 border border-[rgba(214,179,106,0.2)] bg-[rgba(214,179,106,0.05)]">
+                            <img src="portrait_2.jpg" alt="Muhammad A. Yunas Portrait" class="w-full h-auto rounded-lg mb-4 shadow-lg object-cover aspect-square">
+                            <h3 class="font-bold text-white text-lg">Industry Leadership</h3>
+                            <p class="text-sm text-[var(--muted)] mt-2">Author of <em>"Silicon Meets Steel: Why Physical AI Is the Next $500B Industrial Category"</em>.</p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="card p-5 flex-1 flex flex-col justify-center">
+                                <h4 class="text-[var(--accent-2)] font-bold mb-1">Education</h4>
+                                <p class="text-sm text-white">M.A., Diplomacy & Int. Relations</p>
+                                <p class="text-sm text-white">M.A., Corp. & Public Comms</p>
+                                <p class="text-xs text-[var(--muted)] mt-1">Seton Hall University</p>
+                            </div>
+                            <div class="card p-5 flex-1 flex flex-col justify-center">
+                                <h4 class="text-[var(--accent-2)] font-bold mb-1">Certifications</h4>
+                                <p class="text-sm text-white">Certified PMM (PMA)</p>
+                                <p class="text-sm text-white">Ethics in Generative AI</p>
+                                <p class="text-sm text-white">Cloud AI Pro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="section">
+            <div class="container reveal">
+                <div class="section-heading">
+                    <p class="eyebrow">Core Competencies</p>
+                    <h2>Strategic GTM Architecture</h2>
+                    <p class="lead mb-8">Bridging the gap between deeply technical capabilities and executive buyer value across industrial, enterprise, and cybersecurity landscapes.</p>
+                </div>
+                
+                <div class="keyword-cloud">
+                    <span class="keyword highlight">Physical AI GTM Strategy</span>
+                    <span class="keyword highlight">Agentic AI Commercialization</span>
+                    <span class="keyword highlight">Category Creation & Narrative</span>
+                    <span class="keyword">Industry 4.0 Market Entry</span>
+                    <span class="keyword">OT/IT Convergence GTM</span>
+                    <span class="keyword">Pipeline Generation & ABM</span>
+                    <span class="keyword">Product Positioning & Messaging</span>
+                    <span class="keyword">Sales Enablement & Velocity</span>
+                    <span class="keyword">PLG & SaaS Economics</span>
+                    <span class="keyword">Competitive Intelligence Systems</span>
+                    <span class="keyword">Partner Ecosystem Architecture</span>
+                    <span class="keyword">Cross-Functional Revenue Alignment</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section pt-0">
+            <div class="container reveal">
+                <div class="section-heading mb-12">
+                    <p class="eyebrow">Track Record</p>
+                    <h2>Professional Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Consultant -->
+                    <div class="card timeline-item reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Director, PMM / Independent Consultant</h3>
+                                <div class="company mt-1">Interim & Fractional • New York, NY</div>
+                            </div>
+                            <span class="date">Jul 2024 - Present</span>
+                        </div>
+                        <p class="text-[var(--muted)] mt-2">Physical AI and Agentic AI GTM counsel for enterprise B2B organizations commercializing AI systems that sense, reason, and act in the physical world.</p>
+                        <ul>
+                            <li>Architected GTM frameworks for Agentic AI and OT/IT convergence platforms spanning edge intelligence, predictive operations, and cyber-physical security.</li>
+                            <li>Shaped Physical AI and Industry 4.0 category narratives through publications, executive advisory, and industry panels.</li>
+                            <li>Drove 80% director-level promotion rate across 8+ mentored GTM professionals.</li>
+                        </ul>
+                    </div>
+
+                    <!-- UST Global -->
+                    <div class="card timeline-item reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Director, Product Marketing</h3>
+                                <div class="company mt-1">UST Global • Aliso Viejo, CA</div>
+                            </div>
+                            <span class="date">Dec 2022 - Jun 2024</span>
+                        </div>
+                        <p class="text-sm font-semibold text-[var(--accent)] mt-1 tracking-wide">4 PMMs | $2M+ budget | NA & EMEA</p>
+                        <ul>
+                            <li>Drove $9M in new revenue (30% YoY) and largest regional pipeline in company history by repositioning capabilities as <em>Physical Operations Intelligence</em>.</li>
+                            <li>Unlocked industrial and commercial buyer personas across manufacturing, supply chain, and engineering services.</li>
+                            <li>Expanded customer engagement 75%; reduced CAC 15%; tripled conversion rates via ML-driven buyer journey redesign.</li>
+                            <li>Secured $10M untapped market opportunity delivering 34% incremental revenue through structured cross-functional GTM.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Uptake -->
+                    <div class="card timeline-item reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>VP, Product Marketing – Process & Manufacturing</h3>
+                                <div class="company mt-1">Uptake Technologies • Chicago, IL</div>
+                            </div>
+                            <span class="date">Dec 2021 - Oct 2022</span>
+                        </div>
+                        <p class="text-sm font-semibold text-[var(--accent)] mt-1 tracking-wide">$50M+ Industrial AI Platform | Enterprise Clients: Caterpillar, BHE</p>
+                        <ul>
+                            <li>Commercialized OT/IT convergence narrative for predictive maintenance and asset performance management.</li>
+                            <li>Bridged OT and IT buyer languages across Sales, CS, and Product, reducing sales cycles 40% and increasing target account engagement 35%.</li>
+                            <li>Eliminated $2M in annual wasted ad spend through AI-driven industrial segmentation.</li>
+                            <li>Lifted marketing ROI 15% and conversion rates 25% via A/B testing and precision targeting.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dell -->
+                    <div class="card timeline-item reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Director, PMM – Cyber Recovery & Channel</h3>
+                                <div class="company mt-1">Dell Technologies • Boston, MA</div>
+                            </div>
+                            <span class="date">Jan 2016 - Nov 2021</span>
+                        </div>
+                        <p class="text-sm font-semibold text-[var(--accent)] mt-1 tracking-wide">6 PMMs | $5M+ budget | $500M+ global portfolio</p>
+                        <ul>
+                            <li>Repositioned $500M+ cybersecurity portfolio as <em>cyber-physical resilience</em>, connecting data protection to operational uptime.</li>
+                            <li>Increased competitive win rate 42%, grew market share 37%, and elevated NPS +25 points to the highest score in division history.</li>
+                            <li>Scaled AI-powered onboarding to 5,000+ users annually, reducing time-to-value 25%.</li>
+                            <li>Generated $24M in net-new pipeline through modular messaging frameworks; reduced partner sales cycles 66%.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Schneider Electric -->
+                    <div class="card timeline-item reveal">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Senior Director & Director, PMM – DCIM & Early IIoT</h3>
+                                <div class="company mt-1">Schneider Electric • Boston, MA</div>
+                            </div>
+                            <span class="date">Sep 2006 - Dec 2015</span>
+                        </div>
+                        <p class="text-sm font-semibold text-[var(--accent)] mt-1 tracking-wide">The Origin of Physical AI</p>
+                        <ul>
+                            <li>Spearheaded early IIoT platform launch scaling to $75M+ cumulative revenue in 18 months with 38% market share.</li>
+                            <li>Defined and commercialized the DCIM category from inception establishing the GTM architecture for what is now recognized as Physical AI.</li>
+                            <li>Pioneered SaaS GTM playbook, driving $32M revenue growth across 12+ launches with 45% first-year adoption.</li>
+                            <li>Executed $120M TAM expansion strategy positioning Schneider as Tier-1 DCIM category leader.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container reveal">
+                <div class="card contact-card">
+                    <div>
+                        <p class="eyebrow mb-2 text-[var(--accent-2)]">Get In Touch</p>
+                        <h2 class="text-3xl font-extrabold text-white mb-4">Let's build the next category.</h2>
+                        <p class="text-[var(--muted)] mb-8 max-w-md">
+                            Whether you need strategic GTM counsel for an emerging Agentic AI platform or need to bridge the OT/IT divide for industrial buyers, I am ready to help accelerate your revenue pipeline.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:yunasmuh@gmail.com" class="button button-primary w-full justify-center text-lg">
+                            yunasmuh@gmail.com
+                        </a>
+                        <a href="tel:4012483664" class="button button-secondary w-full justify-center text-lg">
+                            (401) 248-3664
+                        </a>
+                        <a href="https://linkedin.com/in/muhammad-yunas" target="_blank" rel="noopener" class="button button-secondary w-full justify-center text-lg">
+                            LinkedIn Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Muhammad A. Yunas. All rights reserved.</p>
+            <p class="text-sm">New York, NY | Physical AI & Agentic AI GTM Leader</p>
         </div>
+    </footer>
 
-        <div class="card">
-          <h3>Executive Narrative & Board‑Level Storytelling</h3>
-          <p>
-            Built executive‑grade narratives for complex AI and industrial products, aligning
-            C‑suite, product, and sales around a single, defensible story that survives scrutiny
-            from boards, customers, and regulators.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <script>
+        // Set dynamic year in footer
+        const yearElement = document.getElementById('year');
+        if (yearElement) {
+          yearElement.textContent = new Date().getFullYear();
+        }
 
-  <!-- RESUME -->
-  <section id="resume" class="section">
-    <div class="container">
-      <h2>Executive Resume · Physical AI & GTM</h2>
+        // Handle staggered reveal animations
+        const reveals = document.querySelectorAll('.reveal');
+        
+        // Add staggered delay to metric cards for a cascade effect
+        document.querySelectorAll('.metric-card.reveal').forEach((card, index) => {
+          card.style.transitionDelay = `${index * 120}ms`;
+        });
 
-      <p class="lead">
-        Full detail on roles, impact, GTM systems, and category creation across Physical AI,
-        industrial autonomy, and operational intelligence.
-      </p>
+        // Intersection Observer for scroll animations
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(
+            (entries, observerInstance) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                observerInstance.unobserve(entry.target);
+              });
+            },
+            {
+              threshold: 0.15,
+              rootMargin: '0px 0px -5% 0px'
+            }
+          );
 
-      <a class="btn" href="assets/resume.pdf" target="_blank">Open Executive Resume (PDF)</a>
-
-      <div class="card" style="margin-top: 2rem;">
-        <h3>Contact & Signals</h3>
-        <p>
-          <strong>Email:</strong> yunasmuh@gmail.com<br />
-          <strong>Phone:</strong> 401‑248‑3664<br />
-          <strong>Location:</strong> West Islip, NY · Long Island
-        </p>
-        <p>
-          Available for roles where Physical AI, agentic systems, and industrial intelligence
-          are core to the product and the story—Senior Director, VP, or Head of Product
-          Marketing / GTM.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      Muhammad Yunas · Physical AI · Agentic AI · Industrial Intelligence<br />
-      748 Pine Ave · West Islip, NY 11795
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+          reveals.forEach((element) => observer.observe(element));
+        } else {
+          // Fallback for older browsers
+          reveals.forEach((element) => element.classList.add('is-visible'));
+        }
+    </script>
 </body>
 </html>
