@@ -110,3 +110,89 @@
 </script>
 
 <h2 class="section-title">Capabilities</h2>
+
+Apply these enhancements to your entire site structure
+→ Build your “Capabilities”, “Experience”, and “About” sections
+→ Add a premium footer with persona micro‑interactions
+
+<script>
+const titles = document.querySelectorAll('.section-title');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+});
+titles.forEach(title => observer.observe(title));
+</script>
+
+<section id="about">
+    <h2 class="section-title">About</h2>
+
+    <p>
+        I specialize in commercializing emerging industrial technologies — from defining DCIM at
+        Schneider Electric to pioneering cyber‑physical resilience at Dell Technologies. Today, I
+        help enterprises adopt Physical AI and Agentic AI architectures that compress sales cycles,
+        expand market share, and unlock new industrial categories.
+    </p>
+
+    <div class="card hover-lift">
+        <h3>Philosophy</h3>
+        <p>Listen deeply. Clarify relentlessly. Execute decisively.</p>
+    </div>
+</section>
+
+<section id="capabilities">
+    <h2 class="section-title">Capabilities</h2>
+
+    <div class="card hover-lift">
+        <h3>Physical AI GTM Architecture</h3>
+        <p>Building GTM engines for cyber‑physical systems, industrial AI, and OT/IT convergence.</p>
+    </div>
+
+    <div class="card hover-lift">
+        <h3>Agentic AI Strategy</h3>
+        <p>Designing autonomous workflows that reduce operational drag and accelerate revenue.</p>
+    </div>
+
+    <div class="card hover-lift">
+        <h3>Industrial Category Creation</h3>
+        <p>Turning emerging technologies into recognizable, fundable, and scalable market categories.</p>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="card hover-lift">
+        <h3>Schneider Electric</h3>
+        <p>Defined DCIM and led early OT/IT convergence initiatives.</p>
+    </div>
+
+    <div class="card hover-lift">
+        <h3>Dell Technologies</h3>
+        <p>Pioneered cyber‑physical resilience and generated $24M in net‑new pipeline.</p>
+    </div>
+
+    <div class="card hover-lift">
+        <h3>Agentic AI Advisory</h3>
+        <p>Guiding enterprises through autonomous system adoption and industrial AI transformation.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 Muhammad A. Yunas — Physical AI & Agentic AI GTM Leader</p>
+
+    <div class="footer-persona" id="footerPersona">
+        “Every industrial category begins with a narrative — make yours inevitable.”
+    </div>
+</footer>
+
+<script>
+const footerPersona = document.getElementById('footerPersona');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+        footerPersona.classList.add('visible');
+    }
+});
+</script>
